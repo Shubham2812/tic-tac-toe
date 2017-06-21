@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> {{title}} </title>
+</head>
+<body>
+	<!-- <h1> {{title}} </h1> -->
+	
+	<div class="main">
+		<div class="p1">
+			<div #p1_enter class="enter">
+				<div> Enter Name </div>
+				<input #p1_name type="text" [(ngModel)]="p1name" placeholder="Enter Name"> <br>
+				Choose Photo
+				<div class="images" (click)="imageSelectP1($event, p1_image)">
+					<div> 
+						<img src="../assets/w1.jpg">
+						<img src="../assets/w2.jpg">
+						<img src="../assets/w3.jpg">
+					</div>
+					<div>
+						<img src="../assets/w4.png">
+						<img src="../assets/w5.png">
+						<img src="../assets/w6.jpg">	
+					</div>
+				</div>
+			</div>
+			<div #p1 class="show">
+				<h1> {{p1name}} </h1>
+				<img #p1_image src="../assets/{{p1_avatar}}">
+			</div>
+			<img #zero class="zero" src="../assets/zero.png">
+			<img #trophy1 class="trophy" src="../assets/trophy.png">						
+		</div>
+		<div class="board"> 
+			<img src="../assets/title.png">
+			<div class="buttons">
+				<button class="begin" (click)="begin(p1, p1_name, p1_photo, p1_enter, p2_enter, zero, cross)"> BEGIN </button>
+				<button class="reset" (click)="reset(p1, p2, row1, row2, row3, p1_enter, p2_enter, trophy1, trophy2, zero, cross, p1_image, p2_image)"> RESET </button>
+			</div>
+			<div class="game_board">
+				<div #row1 class="row">
+					<div class="element" #elem00 id="00" (click)="onClick($event, elem00, p1, p2, trophy1, trophy2)">
+						<img src="../assets/cross.png">
+						<img src="../assets/zero.png">		
+					</div>
+					<div class="element" #elem01 id="01" (click)="onClick($event, elem01, p1, p2, trophy1, trophy2)">
+						<img src="../assets/cross.png">
+						<img src="../assets/zero.png">
+					</div>
+					<div class="element" #elem02 id="02" (click)="onClick($event, elem02, p1, p2, trophy1, trophy2)">
+						<img src="../assets/cross.png">
+						<img src="../assets/zero.png">
+					</div>
+				</div>
+				<div #row2 class="row">
+					<div class="element" #elem10 id="10" (click)="onClick($event, elem10, p1, p2, trophy1, trophy2)">
+						<img src="../assets/cross.png">
+						<img src="../assets/zero.png">
+					</div>
+					<div class="element" #elem11 id="11" (click)="onClick($event, elem11, p1, p2, trophy1, trophy2)">
+						<img src="../assets/cross.png">
+						<img src="../assets/zero.png">
+					</div>
+					<div class="element" #elem12 id="12" (click)="onClick($event, elem12, p1, p2, trophy1, trophy2)">
+						<img src="../assets/cross.png">
+						<img src="../assets/zero.png">
+					</div>
+				</div>
+				<div #row3 class="row">
+					<div class="element" #elem20 id="20" (click)="onClick($event, elem20, p1, p2, trophy1, trophy2)">
+						<img src="../assets/cross.png">
+						<img src="../assets/zero.png">
+					</div>
+					<div class="element" #elem21 id="21" (click)="onClick($event, elem21, p1, p2, trophy1, trophy2)">
+						<img src="../assets/cross.png">
+						<img src="../assets/zero.png">
+					</div>
+					<div class="element" #elem22 id="22" (click)="onClick($event, elem22, p1, p2, trophy1, trophy2)">
+						<img src="../assets/cross.png">
+						<img src="../assets/zero.png">
+					</div>
+				</div>
+			</div>
+			<div style="color: brown">
+				Created By: <strong> SHUBHAM AGGARWAL </strong>
+			</div>
+		</div>
+		<div class="p2">
+			<div #p2_enter class="enter">
+				<div> Enter Name </div>
+				<input #p2_name type="text" [(ngModel)]="p2name" placeholder="Enter Name"> <br>
+				Choose Photo
+				<div class="images" (click)="imageSelectP2($event, p2_image)">
+					<div> 
+						<img src="../assets/w1.jpg">
+						<img src="../assets/w2.jpg">
+						<img src="../assets/w3.jpg">
+					</div>
+					<div>
+						<img src="../assets/w4.png">
+						<img src="../assets/w5.png">
+						<img src="../assets/w6.jpg">	
+					</div>
+				</div>
+			</div>
+			<div #p2 class="show">
+				<h1> {{p2name}} </h1>
+				<img #p2_image src="../assets/{{p2_avatar}}">
+			</div>
+			<img #cross class="cross" src="../assets/cross.png">
+			<img #trophy2 class="trophy" src="../assets/trophy.png">						
+		</div>
+	</div>
+</body>
+</html>

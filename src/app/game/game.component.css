@@ -1,0 +1,150 @@
+.main{
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.main > div{
+	padding: 20px;
+}
+
+.game_board{
+	background-image: url('../assets/board.jpg');
+	background-size: 100% 100%;
+	border-radius: 10%;
+}
+
+.p1, .p2{
+	height: 300px;
+}
+
+.zero, .cross{
+	height: 80px;
+	width: 80px;
+	display: none;
+	margin: auto;
+	margin-top: 60px;
+}
+
+.trophy{
+	height: 130px;
+	width: 130px;
+	display: none;
+	margin: auto;
+}
+
+
+.board{
+	height: 620px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: white;
+}
+
+.buttons{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.board > img{
+	height: 150px;
+}
+
+.row{
+	display: flex;
+}
+
+.element{
+	height: 100px;
+	width: 100px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.element > img{
+	height: 90%;
+	width: 90%;
+	display: none;
+}
+
+.begin, .reset{
+	padding: 10px;
+	width: 100px;
+	border-radius: 5%;
+	height: 50px;
+	font-size: 20px;
+}
+
+.begin{
+	background-color: pink;
+	border: 1px solid brown;
+	color: brown;
+}
+
+.reset{
+	background-color: lightgreen;
+	border: 1px solid darkgreen;
+	color: darkgreen;
+}
+
+.begin:hover, .reset:hover{
+	cursor: pointer;
+	box-shadow: 0 0 10px grey;
+}
+
+.images{
+	display: flex;
+	flex-direction: column;
+	border-radius: 10%;
+}
+
+.images > div{
+	display: flex;
+	justify-content: space-around;
+	background-color: white;
+}
+
+.images > div > img{
+	border-radius: 50%;
+	border: 1px solid grey;
+	height: 100px;
+	width: 100px;
+}
+
+.images > div > img:hover{
+	cursor: pointer;
+}
+
+.enter{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.show{
+	background-color: white;
+	height: 300px;
+	width: 300px;
+	border-radius: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	margin-top: 40px;
+}
+
+.show > img{
+	height: 200px; 
+	width: 200px;
+	display: none;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+
